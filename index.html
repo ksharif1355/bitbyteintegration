@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>BitByteIntegration</title>
+  <style>
+    html {
+      scroll-behavior: smooth;
+    }
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #f4f4f4;
+      color: #333;
+      transition: background-color 0.3s, color 0.3s;
+    }
+    body.dark-mode {
+      background-color: #121212;
+      color: #e0e0e0;
+    }
+    header {
+      background-color: #0a0f2c;
+      color: white;
+      padding: 20px;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    header img {
+      height: 50px;
+      margin-right: 10px;
+    }
+    nav a {
+      color: white;
+      margin: 0 15px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    nav a:hover {
+      text-decoration: underline;
+    }
+    .cta-buttons a {
+      display: inline-block;
+      margin: 10px;
+      padding: 12px 24px;
+      background-color: #00bcd4;
+      color: white;
+      text-decoration: none;
+      border-radius: 5px;
+      font-weight: bold;
+    }
+    .cta-buttons a:hover {
+      background-color: #0097a7;
+    }
+    section {
+      padding: 60px 20px;
+      max-width: 1000px;
+      margin: auto;
+    }
+    .service-box {
+      background-color: white;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      margin-bottom: 30px;
+    }
+    body.dark-mode .service-box {
+      background-color: #1e1e1e;
+      color: #e0e0e0;
+      box-shadow: none;
+    }
+    footer {
+      background-color: #0a0f2c;
+      color: white;
+      text-align: center;
+      padding: 20px;
+    }
+    #darkToggle {
+      margin-left: 10px;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div style="display:flex; align-items:center;">
+      <img src="logo.png" alt="BitByteIntegration Logo" />
+      <h2>BitByteIntegration</h2>
+    </div>
+    <nav>
+      <a href="#home">Home</a>
+      <a href="#network">Network</a>
+      <a href="#cloud">Cloud</a>
+      <a href="#software">Software</a>
+      <a href="#contact">Contact</a>
+      🌙 <input type="checkbox" id="darkToggle" />
+    </nav>
+  </header>
+
+  <section id="home">
+    <h1>Engineering Digital Excellence</h1>
+    <p>Networks, Cloud, and Software — built for scale, security, and performance.</p>
+    <div class="cta-buttons">
+      <a href="#contact">Get a Free Consultation</a>
+      <a href="#network">Explore Our Services</a>
+    </div>
+  </section>
+
+  <section id="network" class="service-box">
+    <h2>🔌 Network Configuration & Deployments</h2>
+    <p>We design and deploy secure, scalable network infrastructures tailored to your business needs.</p>
+    <ul>
+      <li>LAN/WAN architecture and implementation</li>
+      <li>Firewall setup and VPN configuration</li>
+      <li>Enterprise-grade diagnostics and monitoring</li>
+      <li>Remote access and secure tunneling</li>
+      <li>Network performance optimization</li>
+    </ul>
+    <p><strong>Tools:</strong> Cisco, MikroTik, pfSense, WireGuard, OpenVPN</p>
+  </section>
+
+  <section id="cloud" class="service-box">
+    <h2>☁️ Cloud & System Deployments</h2>
+    <p>We help businesses transition to cloud-native infrastructure with speed, security, and scalability.</p>
+    <ul>
+      <li>OpenShift virtualization and VM provisioning</li>
+      <li>Kubernetes cluster setup and management</li>
+      <li>Ceph and ODF storage configuration</li>
+      <li>CI/CD pipeline integration</li>
+      <li>Hybrid cloud deployments (AWS, Azure, GCP)</li>
+    </ul>
+    <p><strong>Automation:</strong> Ansible, Terraform, GitOps workflows</p>
+  </section>
+
+  <section id="software" class="service-box">
+    <h2>💻 Software Development</h2>
+    <p>We build custom software solutions that solve real-world problems and scale with your business.</p>
+    <h3>Mobile Apps</h3>
+    <ul>
+      <li>Android & iOS native development</li>
+      <li>Cross-platform apps using Flutter or React Native</li>
+    </ul>
+    <h3>Web Development</h3>
+    <ul>
+      <li>Responsive websites and dashboards</li>
+      <li>Full-stack apps (React, Django, Node.js)</li>
+    </ul>
+    <h3>Desktop Tools</h3>
+    <ul>
+      <li>Automation utilities (Python, Electron)</li>
+      <li>Data visualization and reporting tools</li>
+    </ul>
+  </section>
+
+  <section id="contact" class="service-box">
+    <h2>📞 Contact Us</h2>
+    <p>📧 info@bitbyteintegration.com</p>
+    <p>📱 +92-XXX-XXXXXXX</p>
+    <p><a href="#">Schedule a Call</a> | <a href="#">Send a Message</a></p>
+  </section>
+
+  <footer>
+    <p>© 2025 BitByteIntegration. All rights reserved.</p>
+  </footer>
+
+  <script>
+    const toggle = document.getElementById('darkToggle');
+    toggle.addEventListener('change', () => {
+      document.body.classList.toggle('dark-mode');
+    });
+  </script>
+
+</body>
+</html>
