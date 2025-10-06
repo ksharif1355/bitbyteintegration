@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>BitByteIntegration</title>
+  <style>
+    /* === ANIMATIONS === */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes slideIn {
+  from { opacity: 0; transform: translateX(-30px); }
+  to { opacity: 1; transform: translateX(0); }
+}
+
+/* === BASE STYLES === */
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #f4f4f4;
+  color: #333;
+  animation: fadeIn 1s ease-in;
+}
+
+header {
+  background-color: #0a0f2c;
+  color: white;
+  padding: 60px 20px;
+  text-align: center;
+  animation: fadeIn 1s ease-in;
+}
+
+header h1 {
+  font-size: 3em;
+  margin-bottom: 10px;
+}
+
+header p {
+  font-size: 1.2em;
+  margin-bottom: 20px;
+}
+
+.cta-buttons a {
+  display: inline-block;
+  margin: 10px;
+  padding: 12px 24px;
+  background-color: #00bcd4;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.cta-buttons a:hover {
+  background-color: #0097a7;
+}
+
+section {
+  padding: 40px 20px;
+  max-width: 1000px;
+  margin: auto;
+  animation: fadeIn 1s ease-in;
+}
+
+.services {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.service-box {
+  flex: 1 1 300px;
+  background-color: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  animation: slideIn 0.8s ease-in;
+}
+
+.service-box h3 {
+  color: #0a0f2c;
+}
+
+.about, .contact {
+  background-color: white;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  margin-top: 20px;
+  animation: fadeIn 1s ease-in;
+}
+
+footer {
+  background-color: #0a0f2c;
+  color: white;
+  text-align: center;
+  padding: 20px;
+  margin-top: 40px;
+  animation: fadeIn 1s ease-in;
+}
+
+    body.dark-mode {
+  background-color: #121212;
+  color: #e0e0e0;
+}
+
+body.dark-mode header,
+body.dark-mode footer {
+  background-color: #1f1f1f;
+  color: #e0e0e0;
+}
+
+body.dark-mode .service-box,
+body.dark-mode .about,
+body.dark-mode .contact {
+  background-color: #1e1e1e;
+  color: #e0e0e0;
+  box-shadow: none;
+}
+
+body.dark-mode .cta-buttons a {
+  background-color: #333;
+  color: #00bcd4;
+}
+
+body.dark-mode .cta-buttons a:hover {
+  background-color: #555;
+}
+    
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>BitByteIntegration</h1>
+    <p>Engineering Digital Excellence — Networks, Cloud, and Software</p>
+    <div class="cta-buttons">
+      <a href="#contact">Get a Free Consultation</a>
+      <a href="#services">Explore Our Services</a>
+    </div>
+  </header>
+
+  <div style="text-align:right; padding:10px 20px;">
+  <label>
+    <input type="checkbox" id="darkToggle" />
+    🌙 Dark Mode
+  </label>
+</div>
+  
+  <section id="services">
+    <h2>Our Services</h2>
+    <div class="services">
+      <div class="service-box">
+        <h3>🔌 Network Configuration</h3>
+        <p>Secure LAN/WAN setups, VPNs, firewalls, and enterprise-grade diagnostics.</p>
+      </div>
+      <div class="service-box">
+        <h3>☁️ Cloud & System Deployments</h3>
+        <p>OpenShift, Kubernetes, Ceph, VM provisioning, CI/CD pipelines, and hybrid cloud solutions.</p>
+      </div>
+      <div class="service-box">
+        <h3>💻 Software Development</h3>
+        <p>Mobile apps, responsive websites, and desktop tools built for performance and scale.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="about">
+    <h2>About Us</h2>
+    <p>BitByteIntegration is founded on the belief that digital infrastructure should be powerful, flexible, and easy to manage. We serve startups, SMEs, and enterprises looking to modernize their tech stack and accelerate innovation.</p>
+    <p><strong>Mission:</strong> To empower businesses through intelligent systems, secure networks, and impactful software.</p>
+  </section>
+
+  <section id="contact" class="contact">
+    <h2>Contact Us</h2>
+    <p>📧 info@bitbyteintegration.com</p>
+    <p>📱 +92-XXX-XXXXXXX</p>
+    <p><a href="#">Schedule a Call</a> | <a href="#">Send a Message</a></p>
+  </section>
+
+  <footer>
+    <p>© 2025 BitByteIntegration. All rights reserved.</p>
+  </footer>
+  
+<script>
+  const toggle = document.getElementById('darkToggle');
+  toggle.addEventListener('change', () => {
+    document.body.classList.toggle('dark-mode');
+  });
+</script>
+  
+</body>
+</html>
